@@ -131,7 +131,7 @@ const Login = () => {
                     illegalUsername &&
                     <div className="services__modal">
                         <div className="services__modal-content login__error__modal-content">
-                            <h4 className="services__modal-title">Lechonk <br /> Guidelines</h4>
+                            <h4 className="services__modal-title">Ralts <br /> Guidelines</h4>
                             <i
                                 onClick={() => {
                                     setIllegalUsername(false);
@@ -150,7 +150,7 @@ const Login = () => {
                     usernamePresent &&
                     <div className="services__modal">
                         <div className="services__modal-content login__error__modal-content">
-                            <h4 className="services__modal-title">Lechonk <br /> Guidelines</h4>
+                            <h4 className="services__modal-title">Ralts <br /> Guidelines</h4>
                             <i
                                 onClick={() => {
                                     setUsernamePresent(false);
@@ -168,7 +168,7 @@ const Login = () => {
                     emailPresent &&
                     <div className="services__modal">
                         <div className="services__modal-content login__error__modal-content">
-                            <h4 className="services__modal-title">Lechonk <br /> Guidelines</h4>
+                            <h4 className="services__modal-title">Ralts <br /> Guidelines</h4>
                             <i
                                 onClick={() => {
                                     setEmailPresent(false);
@@ -187,7 +187,7 @@ const Login = () => {
                     error &&
                     <div className="services__modal">
                         <div className="services__modal-content login__error__modal-content">
-                            <h4 className="services__modal-title">Lechonk <br /> Guidelines</h4>
+                            <h4 className="services__modal-title">Ralts <br /> Guidelines</h4>
                             <i
                                 onClick={() => {
                                     setError(false);
