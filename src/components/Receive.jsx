@@ -13,7 +13,6 @@ import {
 import { getBytes } from 'firebase/storage';
 import NoRoom from './NoRoom';
 
-
 const Receive = () => {
 
     const { id } = useParams();

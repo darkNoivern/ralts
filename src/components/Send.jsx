@@ -15,6 +15,9 @@ const Send = () => {
     const navigate = useNavigate();
     const { currentUser } = useContext(AuthContext)
 
+    const [deleteError, setDeleteError] = useState(false);
+    const [uploadError, setUploadError] = useState(false);
+
     const [present, setPresent] = useState([]);
     const transactionsCollectionRef = collection(db, "transactions");
 
@@ -100,10 +103,11 @@ const Send = () => {
         deleteDoc(doc(db, "transactions", id))
             .then(() => {
                 navigate('/');
-                console.log("Entire Document has been deleted successfully.")
+                // console.log("Entire Document has been deleted successfully.")
             })
             .catch(error => {
-                console.log(error);
+                setDeleteError(true);
+                // console.log(error);
             })
     }
 
@@ -115,6 +119,42 @@ const Send = () => {
                     <NoRoom />
                     :
                     <div className="page p-5">
+                        {
+                            deleteError &&
+                            <div className="services__modal">
+                                <div className="services__modal-content login__error__modal-content">
+                                    <h4 className="services__modal-title">Ralts <br /> Guidelines</h4>
+                                    <i
+                                        onClick={() => {
+                                            setDeleteError(false);
+                                        }}
+                                        className="uil uil-times services__modal-close">
+                                    </i>
+                                    <div>
+                                        Couldn't close the room, Try again !!!
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        {
+                            uploadError &&
+                            <div className="services__modal">
+                                <div className="services__modal-content login__error__modal-content">
+                                    <h4 className="services__modal-title">Ralts <br /> Guidelines</h4>
+                                    <i
+                                        onClick={() => {
+                                            setUploadError(false);
+                                        }}
+                                        className="uil uil-times services__modal-close">
+                                    </i>
+                                    <div>
+                                        There was a problem during uploading, Try again !!!
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
                         <div className='my-5 flexy'>
                             Room code :&nbsp;
                             <button

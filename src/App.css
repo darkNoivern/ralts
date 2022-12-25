@@ -5,7 +5,7 @@
 }
 
 .page{
-  height: 70vh;
+  min-height: 70vh;
   width: 100vw;
 }
 
@@ -67,6 +67,7 @@ img{
 .file-input{
   border: 1px dashed black;
   cursor: pointer;
+  width: min(100%, 25rem);
 }
 
 .receive-card{
